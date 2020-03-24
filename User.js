@@ -1,5 +1,6 @@
 //Put your custom functions and variables in this file
 
+g_recordUrls = false;
 g_browserLibrary = "Chrome";
 
 if (!g_recording)
@@ -10,6 +11,20 @@ if (!g_recording)
 		Navigator.EnsureVisibleVerticalAlignment = "center";
 		Navigator.NativeEvents = true;
 	}
+}
+
+function SfdcFindObject(/**string*/ xpath)
+{
+	for(var i = 0; i < g_objectLookupAttempts; i++)
+	{
+		var obj = Navigator.Find(xpath);
+		if (obj)
+		{
+			return obj;
+		}
+		Global.DoSleep(g_objectLookupAttemptInterval);
+	}
+	return null;
 }
 
 /**
@@ -32,7 +47,7 @@ function SfdcOpenApp(/**string*/ app)
 {
 	SeS("G_Waffle").DoClick();
 	var xpath = "//a[@data-label='" + app + "']";
-	var obj = Navigator.Find(xpath);
+	var obj = SfdcFindObject(xpath);
 	if (obj)	
 	{
 		obj.object_name = app;
@@ -51,7 +66,7 @@ function SfdcOpenApp(/**string*/ app)
 function SfdcNavigateModule(/**string*/ module)
 {
 	var xpath = "//one-app-nav-bar-item-root/a[@title='" + module + "']";
-	var obj = Navigator.Find(xpath);
+	var obj = SfdcFindObject(xpath);
 	if (obj)	
 	{
 		obj.object_name = module;
@@ -71,7 +86,7 @@ function SfdcSelectListView(/**string*/ view)
 {
 	SeS("G_Select_List_View").DoClick();
 	var xpath = "//a[@role='option']//span[text()='" + view + "']";
-	var obj = Navigator.Find(xpath);
+	var obj = SfdcFindObject(xpath);
 	if (obj)	
 	{
 		obj.object_name = view;
@@ -89,7 +104,7 @@ function SfdcSelectListView(/**string*/ view)
 function SfdcSearchTable(/**string*/ value)
 {
 	var xpath = "//input[@type='search' and @class='slds-input']";
-	var obj = Navigator.Find(xpath);
+	var obj = SfdcFindObject(xpath);
 	if (obj)	
 	{
 		obj.object_name = "Search";
@@ -111,12 +126,12 @@ function SfdcSearchTable(/**string*/ value)
 function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 {
 	var xpath = "//a[@role='button' and ../../../../..//span[text()='" + name + "']]";
-	var obj = Navigator.Find(xpath);
+	var obj = SfdcFindObject(xpath);
 	if (obj)	
 	{
 		obj.object_name = name;
 		obj.DoClick(obj.GetWidth() - 20);
-		var itemObj = Navigator.Find("//a[@title='" + item + "' and @role='menuitemradio']");
+		var itemObj = SfdcFindObject("//a[@title='" + item + "' and @role='menuitemradio']");
 		if (itemObj)
 		{
 			itemObj.object_name = item;
@@ -131,6 +146,27 @@ function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 	{
 		Tester.Assert("Combobox element is not found: " + name, false);
 	}
+}
+
+/**
+ * Writes key/value pair to Output.xlsx
+ * @param key
+ * @param value
+ */
+function SetOutputValue(/**string*/ key, /**string*/ value)
+{
+	Global.SetProperty(key, value, "%WORKDIR%\\Output.xlsx");
+}
+
+
+/**
+ * Reads value from Output.xlsx
+ * @param key
+ * @param [defValue]
+ */
+function GetOutputValue(/**string*/ key, /**string*/ defValue)
+{
+	return Global.GetProperty(key, defValue, "%WORKDIR%\\Output.xlsx");
 }
 
 /**

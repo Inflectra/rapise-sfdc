@@ -206,31 +206,5 @@ var saved_script_objects={
 		"xpath": "//button[@title='Delete' and @type='button']",
 		"title": "John Smith | Salesforce",
 		"url": "https://grinmark-dev-ed.lightning.force.com/lightning/r/Lead/00Q0N00000eNLI7UAO/view"
-	},
-	"LeadFullName": {
-		"locations": [
-			{
-				"locator_name": "HTML",
-				"location": {
-					"xpath": "param:xpath",
-					"url": "param:url",
-					"title": "param:title"
-				}
-			}
-		],
-		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "param:object_name",
-		"object_role": "ROLE_SYSTEM_WINDOW",
-		"object_class": "Chrome_RenderWidgetHostHWND",
-		"version": 0,
-		"object_type": "HTMLObject",
-		"object_flavor": "Generic",
-		"object_name": "LeadFullName",
-		"ignore_object_name": true,
-		"object_library": "Chrome HTML",
-		"window_name": "John Smith | Salesforce",
-		"xpath": "//slot[@name='primaryField']/slot/lightning-formatted-name",
-		"title": "John Smith | Salesforce",
-		"url": ""
 	}
 };
