@@ -29,25 +29,47 @@ All functions are defined in [User.js](User.js). Look into this file for details
 
 Launches Salesforce in a browser. SfdcUrl, UserName, Password must be set in Config.xlsx
 
+![SfdcLaunch RVL](Media/SfdcLaunch.png)
+
 ### SfdcOpenApp
 
 Opens application.
+
+![SfdcOpenApp RVL](Media/SfdcOpenApp.png)
+
+![OpenApp](Media/OpenApp.png)
 
 ### SfdcNavigateModule
 
 Navigates to module using nav bar.
 
+![SfdcNavigateModule RVL](Media/SfdcNavigateModule.png)
+
+![NavigateModule](Media/NavigateModule.png)
+
 ### SfdcSelectListView
 
 Selects list view.
+
+![SfdcSelectListView RVL](Media/SfdcSelectListView.png)
+
+![SelectListView](Media/SelectListView.png)
 
 ### SfdcSearchTable
 
 Searches data in a table.
 
+![SfdcSearchTable RVL](Media/SfdcSearchTable.png)
+
+![SearchTable](Media/SearchTable.png)
+
 ### SfdcSelectComboboxItem
 
 Selects item from a combobox.
+
+![SfdcSelectComboboxItem RVL](Media/SfdcSelectComboboxItem.png)
+
+![SelectComboboxItem](Media/SelectComboboxItem.png)
 
 ### SetOutputValue
 
