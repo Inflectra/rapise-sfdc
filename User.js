@@ -130,6 +130,7 @@ function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 	if (obj)	
 	{
 		obj.object_name = name;
+        obj.DoEnsureVisible();
 		obj.DoClick(obj.GetWidth() - 20);
 		var itemObj = SfdcFindObject("//a[@title='" + item + "' and @role='menuitemradio']");
 		if (itemObj)
