@@ -52,7 +52,13 @@
         <Path>TC_CreateNewLead\TC_CreateNewLead.sstest</Path>
       </TestFile>
       <TestFile>
+        <Path>TC_Template\TC_Template.sstest</Path>
+      </TestFile>
+      <TestFile>
         <Path>User.js</Path>
+      </TestFile>
+      <TestFile>
+        <Path>WebAppProfile.json</Path>
       </TestFile>
     </TestFiles>
   </TestFiles>
