@@ -1,0 +1,56 @@
+{
+	"Sfdc": {
+		"window_name": "Global Objects",
+		"flavor": "GlobalObject",
+		"actions": [
+			{
+				"name": "Launch",
+				"description": "",
+				"type": "",
+				"returns": "",
+				"signature": "",
+				"paramInfo": {}
+			},
+			{
+				"name": "OpenApp",
+				"description": "",
+				"type": "",
+				"returns": "",
+				"signature": "/**string*/ app",
+				"paramInfo": {}
+			},
+			{
+				"name": "NavigateModule",
+				"description": "",
+				"type": "",
+				"returns": "",
+				"signature": "/**string*/ module",
+				"paramInfo": {}
+			},
+			{
+				"name": "SelectListView",
+				"description": "",
+				"type": "",
+				"returns": "",
+				"signature": "/**string*/ view",
+				"paramInfo": {}
+			},
+			{
+				"name": "SearchTable",
+				"description": "",
+				"type": "",
+				"returns": "",
+				"signature": "/**string*/ value",
+				"paramInfo": {}
+			},
+			{
+				"name": "SelectComboboxItem",
+				"description": "",
+				"type": "",
+				"returns": "",
+				"signature": "/**string*/ name, /**string*/ item",
+				"paramInfo": {}
+			}
+		]
+	}
+}

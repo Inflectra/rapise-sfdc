@@ -25,7 +25,33 @@
     <IsFilterGroup>false</IsFilterGroup>
     <FilterWildcard>*.*</FilterWildcard>
     <FilterPath />
-    <Groups />
+    <Groups>
+      <TestGroup>
+        <Name>Lib</Name>
+        <IsFilterGroup>false</IsFilterGroup>
+        <FilterWildcard>*.*</FilterWildcard>
+        <FilterPath>Lib</FilterPath>
+        <Groups>
+          <TestGroup>
+            <Name>LibSfdc</Name>
+            <IsFilterGroup>false</IsFilterGroup>
+            <FilterWildcard>*.*</FilterWildcard>
+            <FilterPath>LibSfdc</FilterPath>
+            <Groups />
+            <TestFiles>
+              <TestFile>
+                <Path>Lib\LibSfdc\LibSfdc.js</Path>
+              </TestFile>
+            </TestFiles>
+          </TestGroup>
+        </Groups>
+        <TestFiles>
+          <TestFile>
+            <Path>Lib\LibSfdc.jslib</Path>
+          </TestFile>
+        </TestFiles>
+      </TestGroup>
+    </Groups>
     <TestFiles>
       <TestFile>
         <Path>Config.xlsx</Path>
@@ -56,9 +82,6 @@
       </TestFile>
       <TestFile>
         <Path>User.js</Path>
-      </TestFile>
-      <TestFile>
-        <Path>WebAppProfile.json</Path>
       </TestFile>
     </TestFiles>
   </TestFiles>
