@@ -167,19 +167,19 @@ var saved_script_objects={
 			}
 		],
 		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "Chrome Legacy Window",
+		"object_text": "param:object_name",
 		"object_role": "ROLE_SYSTEM_WINDOW",
 		"object_class": "Chrome_RenderWidgetHostHWND",
 		"version": 0,
 		"object_type": "HTMLObject",
-		"object_flavor": "Cell",
+		"object_flavor": "Button",
 		"object_name": "Delete",
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
 		"window_name": "John Smith | Salesforce",
-		"xpath": "//div[@title='Delete']",
+		"xpath": "//button[@name='Delete' and @type='button']",
 		"title": "John Smith | Salesforce",
-		"url": "https://grinmark-dev-ed.lightning.force.com/lightning/r/Lead/00Q0N00000eNLI7UAO/view"
+		"url": ""
 	},
 	"Delete1": {
 		"locations": [

@@ -25,6 +25,14 @@ You may change the profile in `User.js` or pass `g_browserLibrary` value from Sp
 
 All functions are defined in [User.js](User.js). Look into this file for details.
 
+**Note:** If you are on Rapise 6.6+ you may use global `Crm` object.
+
+![Global Object](Media/Sfdc.png)
+
+Every function with `Sfdc` prefix is now also an action of `Sfdc` (without the prefix). These two variants are equavalent:
+
+![Equivalents](Media/FunctionSfdc.png)
+
 ### SfdcLaunch
 
 Launches Salesforce in a browser. SfdcUrl, UserName, Password must be set in Config.xlsx
