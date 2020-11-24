@@ -25,7 +25,7 @@ You may change the profile in `User.js` or pass `g_browserLibrary` value from Sp
 
 All functions are defined in [User.js](User.js). Look into this file for details.
 
-**Note:** If you are on Rapise 6.6+ you may use global `Crm` object.
+**Note:** If you are on Rapise 6.6+ you may use global `Sfdc` object.
 
 ![Global Object](Media/Sfdc.png)
 
