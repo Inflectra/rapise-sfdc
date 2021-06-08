@@ -125,14 +125,15 @@ function SfdcSearchTable(/**string*/ value)
  */
 function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 {
-	var xpath = "//a[@role='button' and ../../../../..//span[text()='" + name + "']]";
+	var xpath = "//lightning-combobox[./label[text()='" + name + "']]";
 	var obj = SfdcFindObject(xpath);
 	if (obj)	
 	{
 		obj.object_name = name;
         obj.DoEnsureVisible();
 		obj.DoClick(obj.GetWidth() - 20);
-		var itemObj = SfdcFindObject("//a[@title='" + item + "' and @role='menuitemradio']");
+		
+		var itemObj = SfdcFindObject("//lightning-base-combobox-item//span[@title='" + item + "']");
 		if (itemObj)
 		{
 			itemObj.object_name = item;
@@ -148,6 +149,26 @@ function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 		Tester.Assert("Combobox element is not found: " + name, false);
 	}
 }
+
+/**
+ * Saves DOM tree of the current page to dom.xml file.
+ */
+function SfdcSaveDom()
+{
+	var domTree = Navigator.GetDomTree(false);
+	if (domTree)
+	{
+		var res = JSON.stringify(domTree, _underscore_stringify_replacer);
+		File.Write('domR.json', res);
+	
+		Navigator.SaveDomToXml("dom.xml", domTree);
+	}
+	else
+	{
+		Tester.Message("Failed to get DOM tree");
+	}
+}
+
 
 /**
  * Writes key/value pair to Output.xlsx
