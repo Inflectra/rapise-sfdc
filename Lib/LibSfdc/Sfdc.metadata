@@ -50,6 +50,14 @@
 				"returns": "",
 				"signature": "/**string*/ name, /**string*/ item",
 				"paramInfo": {}
+			},
+			{
+				"name": "SaveDom",
+				"description": "",
+				"type": "",
+				"returns": "",
+				"signature": "",
+				"paramInfo": {}
 			}
 		]
 	}

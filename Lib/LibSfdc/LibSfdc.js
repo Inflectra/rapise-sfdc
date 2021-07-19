@@ -30,6 +30,11 @@ function Sfdc_SelectComboboxItem(/**string*/ name, /**string*/ item)
 	SfdcSelectComboboxItem(name, item);
 }
 
+function Sfdc_SaveDom()
+{
+	SfdcSaveDom();
+}
+
 if (typeof(SeSGlobalObject) != "undefined")
 {
 	SeSGlobalObject("Sfdc");
