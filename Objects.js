@@ -47,7 +47,7 @@ var saved_script_objects={
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
 		"window_name": "Recently Viewed | Leads | Salesforce",
-		"xpath": "//a[@title='Select List View' and @role='button']",
+		"xpath": "//div[@data-aura-class='forceListViewPicker']",
 		"title": "Recently Viewed | Leads | Salesforce",
 		"url": ""
 	}
