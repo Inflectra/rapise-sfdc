@@ -12,7 +12,7 @@
 			{ name: "href", exclude: "http://|https://|javascript:" }
 		],
 		classes: [
-			/* { name: "content" } */
+			{ name: "slds-icon-utility-close" }
 		],
 		anchors: [
 			/* { xpath: "//div[@class='content-wrapper']" } */
@@ -62,13 +62,11 @@
 			},
 			clickable: function(el)
 			{
-				/*
 				var tag = el.tagName.toLowerCase();
-				if (tag == "p" || __hasAttribute(el, "title"))
+				if (tag == "lightning-icon")
 				{
 					return true;
 				}
-				*/
 				return false;
 			}
 		}
