@@ -37,7 +37,7 @@ var saved_script_objects={
 			}
 		],
 		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "param:object_name",
+		"object_text": "Chrome Legacy Window",
 		"object_role": "ROLE_SYSTEM_WINDOW",
 		"object_class": "Chrome_RenderWidgetHostHWND",
 		"version": 0,
@@ -47,7 +47,7 @@ var saved_script_objects={
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
 		"window_name": "Lightning Experience | Salesforce",
-		"xpath": "//div[@role='combobox']/lightning-button/button[@type='button']",
+		"xpath": "//lightning-button/button[@type='button']",
 		"title": "Lightning Experience | Salesforce",
 		"url": ""
 	},
@@ -115,7 +115,7 @@ var saved_script_objects={
 			}
 		],
 		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "",
+		"object_text": "Chrome Legacy Window",
 		"object_role": "ROLE_SYSTEM_WINDOW",
 		"object_class": "Chrome_RenderWidgetHostHWND",
 		"version": 0,
@@ -141,7 +141,7 @@ var saved_script_objects={
 			}
 		],
 		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "",
+		"object_text": "Chrome Legacy Window",
 		"object_role": "ROLE_SYSTEM_WINDOW",
 		"object_class": "Chrome_RenderWidgetHostHWND",
 		"version": 0,
@@ -181,7 +181,7 @@ var saved_script_objects={
 		"title": "New Contact | Salesforce",
 		"url": ""
 	},
-	"Close": {
+	"CloseItem": {
 		"locations": [
 			{
 				"locator_name": "HTML",
@@ -207,6 +207,58 @@ var saved_script_objects={
 		"title": "John Smith | Salesforce",
 		"url": ""
 	},
+	"App_Launcher1": {
+		"locations": [
+			{
+				"locator_name": "HTML",
+				"location": {
+					"xpath": "param:xpath",
+					"url": "param:url",
+					"title": "param:title"
+				}
+			}
+		],
+		"window_class": "Chrome_WidgetWin_1",
+		"object_text": "Chrome Legacy Window",
+		"object_role": "ROLE_SYSTEM_WINDOW",
+		"object_class": "Chrome_RenderWidgetHostHWND",
+		"version": 0,
+		"object_type": "HTMLObject",
+		"object_flavor": "Button",
+		"object_name": "App Launcher",
+		"ignore_object_name": true,
+		"object_library": "Chrome HTML",
+		"window_name": "Lightning Experience | Salesforce",
+		"xpath": "//one-app-launcher-header[@id='window']/button",
+		"title": "Lightning Experience | Salesforce",
+		"url": ""
+	},
+	"View_All1": {
+		"locations": [
+			{
+				"locator_name": "HTML",
+				"location": {
+					"xpath": "param:xpath",
+					"url": "param:url",
+					"title": "param:title"
+				}
+			}
+		],
+		"window_class": "Chrome_WidgetWin_1",
+		"object_text": "Chrome Legacy Window",
+		"object_role": "ROLE_SYSTEM_WINDOW",
+		"object_class": "Chrome_RenderWidgetHostHWND",
+		"version": 0,
+		"object_type": "HTMLObject",
+		"object_flavor": "Button",
+		"object_name": "View All",
+		"ignore_object_name": true,
+		"object_library": "Chrome HTML",
+		"window_name": "Lightning Experience | Salesforce",
+		"xpath": "//div[@role='combobox']/lightning-button/button[@type='button']",
+		"title": "Lightning Experience | Salesforce",
+		"url": ""
+	},
 	"Grid": {
 		"locations": [
 			{
@@ -228,9 +280,9 @@ var saved_script_objects={
 		"object_name": "Grid",
 		"ignore_object_name": true,
 		"object_library": "DomSalesforce",
-		"window_name": "Recently Viewed | Contacts | Salesforce",
+		"window_name": "All Contacts | Contacts | Salesforce",
 		"xpath": "//table[contains(@class,'slds-table') and contains(@data-aura-class,'uiVirtualDataTable')]",
-		"title": "Recently Viewed | Contacts | Salesforce",
+		"title": "All Contacts | Contacts | Salesforce",
 		"url": ""
 	},
 	"Delete": {
@@ -254,9 +306,9 @@ var saved_script_objects={
 		"object_name": "Delete",
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
-		"window_name": "Recently Viewed | Contacts | Salesforce",
+		"window_name": "All Contacts | Contacts | Salesforce",
 		"xpath": "//a[@title='Delete' and @role='menuitem']",
-		"title": "Recently Viewed | Contacts | Salesforce",
+		"title": "All Contacts | Contacts | Salesforce",
 		"url": ""
 	},
 	"Delete1": {
@@ -280,12 +332,12 @@ var saved_script_objects={
 		"object_name": "Delete",
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
-		"window_name": "Recently Viewed | Contacts | Salesforce",
+		"window_name": "All Contacts | Contacts | Salesforce",
 		"xpath": "//button[@aria-label='' and @title='Delete' and @type='button']/span",
-		"title": "Recently Viewed | Contacts | Salesforce",
+		"title": "All Contacts | Contacts | Salesforce",
 		"url": ""
 	},
-	"Close1": {
+	"LIGHTNING-ICON": {
 		"locations": [
 			{
 				"locator_name": "HTML",
@@ -306,9 +358,9 @@ var saved_script_objects={
 		"object_name": "LIGHTNING-ICON",
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
-		"window_name": "Recently Viewed | Contacts | Salesforce",
+		"window_name": "All Contacts | Contacts | Salesforce",
 		"xpath": "//lightning-icon[contains(concat(' ', @class, ' '), ' slds-icon-utility-close ')]",
-		"title": "Recently Viewed | Contacts | Salesforce",
+		"title": "All Contacts | Contacts | Salesforce",
 		"url": ""
 	}
 };
