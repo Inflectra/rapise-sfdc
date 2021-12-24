@@ -125,7 +125,7 @@ var saved_script_objects={
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
 		"window_name": "New Lead | Salesforce",
-		"xpath": "//button[@name=\"SaveEdit\"]",
+		"xpath": "//lightning-button[./button[@name=\"SaveEdit\"]]",
 		"title": "New Lead | Salesforce",
 		"url": ""
 	},
@@ -177,7 +177,7 @@ var saved_script_objects={
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
 		"window_name": "John Smith | Salesforce",
-		"xpath": "//button[@name='Delete' and @type='button']",
+		"xpath": "//lightning-button[./button[@name='Delete' and @type='button']]",
 		"title": "John Smith | Salesforce",
 		"url": ""
 	},
@@ -205,7 +205,7 @@ var saved_script_objects={
 		"window_name": "John Smith | Salesforce",
 		"xpath": "//button[@title='Delete' and @type='button']",
 		"title": "John Smith | Salesforce",
-		"url": "https://grinmark-dev-ed.lightning.force.com/lightning/r/Lead/00Q0N00000eNLI7UAO/view"
+		"url": ""
 	},
 	"LeadFullName": {
 		"locations": [
@@ -231,6 +231,32 @@ var saved_script_objects={
 		"window_name": "John Smith | Salesforce",
 		"xpath": "//slot[@name='primaryField']/slot/lightning-formatted-name",
 		"title": "John Smith | Salesforce",
+		"url": ""
+	},
+	"City": {
+		"locations": [
+			{
+				"locator_name": "HTML",
+				"location": {
+					"xpath": "param:xpath",
+					"url": "param:url",
+					"title": "param:title"
+				}
+			}
+		],
+		"window_class": "Chrome_WidgetWin_1",
+		"object_text": "Chrome Legacy Window",
+		"object_role": "ROLE_SYSTEM_WINDOW",
+		"object_class": "Chrome_RenderWidgetHostHWND",
+		"version": 0,
+		"object_type": "HTMLObject",
+		"object_flavor": "Text",
+		"object_name": "City",
+		"ignore_object_name": true,
+		"object_library": "Chrome HTML",
+		"window_name": "New Lead | Salesforce",
+		"xpath": "//input[@name='city' and @type='text']",
+		"title": "New Lead | Salesforce",
 		"url": ""
 	}
 };

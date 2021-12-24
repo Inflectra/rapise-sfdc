@@ -130,10 +130,19 @@ function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 	if (obj)	
 	{
 		obj.object_name = name;
-        obj.DoEnsureVisible();
-		obj.DoClick(obj.GetWidth() - 20);
+		obj.DoEnsureVisible();
 		
-		var itemObj = SfdcFindObject("//lightning-base-combobox-item//span[@title='" + item + "']");
+		var openButton = obj._DoDOMQueryXPath('.//lightning-icon');	
+		if (openButton && openButton.length)
+		{
+			openButton[0].DoClick();
+		}
+		else
+		{
+			obj.DoClick(obj.GetWidth() - 20);
+		}
+		
+		var itemObj = SfdcFindObject("//lightning-base-combobox-item[.//span[@title='" + item + "']]");
 		if (itemObj)
 		{
 			itemObj.object_name = item;
