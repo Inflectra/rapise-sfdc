@@ -18,6 +18,7 @@
   <SavePlaybackScreenshotsInTestReport>false</SavePlaybackScreenshotsInTestReport>
   <SaveScreenshotObjectOnly>false</SaveScreenshotObjectOnly>
   <SaveScreenshotsCaptureCursor>true</SaveScreenshotsCaptureCursor>
+  <SaveScreenshotOnFailure>false</SaveScreenshotOnFailure>
   <CommandLine />
   <EntryPoint>Test</EntryPoint>
   <WorkDir>.</WorkDir>
@@ -37,11 +38,12 @@
             <Name>LibSfdc</Name>
             <IsFilterGroup>false</IsFilterGroup>
             <FilterWildcard>*.*</FilterWildcard>
-            <FilterPath>LibSfdc</FilterPath>
+            <FilterPath>Lib/LibSfdc</FilterPath>
             <Groups />
             <TestFiles>
               <TestFile>
                 <Path>Lib\LibSfdc\LibSfdc.js</Path>
+                <Tags />
               </TestFile>
             </TestFiles>
           </TestGroup>
@@ -49,49 +51,77 @@
         <TestFiles>
           <TestFile>
             <Path>Lib\LibSfdc.jslib</Path>
+            <Tags />
           </TestFile>
         </TestFiles>
+      </TestGroup>
+      <TestGroup>
+        <Name>Reports</Name>
+        <IsFilterGroup>true</IsFilterGroup>
+        <FilterWildcard>*.trp</FilterWildcard>
+        <FilterPath>Reports</FilterPath>
+        <Groups />
+        <TestFiles />
       </TestGroup>
     </Groups>
     <TestFiles>
       <TestFile>
         <Path>Config.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Data.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Dropdowns.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Main.js</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Main.rvl.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Objects.js</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Output.xlsx</Path>
+        <Tags />
+      </TestFile>
+      <TestFile>
+        <Path>TC_CheckAppLauncher\TC_CheckAppLauncher.sstest</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>TC_CreateNewContact\TC_CreateNewContact.sstest</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>TC_CreateNewLead\TC_CreateNewLead.sstest</Path>
+        <Tags />
+      </TestFile>
+      <TestFile>
+        <Path>TC_CreateOpportunity\TC_CreateOpportunity.sstest</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>TC_Template\TC_Template.sstest</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>User.js</Path>
+        <Tags />
       </TestFile>
     </TestFiles>
   </TestFiles>
   <CustomStrings />
   <TestParams>
-    <TestParam name="Browser" variable="g_browserLibrary" defaultValue="Chrome" description="Please, specify browser type to use" output="false" ask="false">
+    <TestParam name="Browser" variable="g_browserLibrary" defaultValue="Selenium - Chrome" description="Please, specify browser type to use" output="false" ask="false">
       <PossibleValues />
     </TestParam>
     <TestParam name="Record Title" variable="g_rWnd" defaultValue="regex:.*" description="Application Title to Record" output="false" ask="false">

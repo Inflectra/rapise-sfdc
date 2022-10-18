@@ -1,7 +1,7 @@
 //Put your custom functions and variables in this file
 
 g_recordUrls = false;
-g_browserLibrary = "Chrome";
+g_browserLibrary = "Selenium - Chrome";
 
 if (!g_recording)
 {
@@ -11,6 +11,11 @@ if (!g_recording)
 		Navigator.EnsureVisibleVerticalAlignment = "center";
 		Navigator.NativeEvents = true;
 	}
+}
+
+function IsSeleniumTest()
+{
+	return typeof(WebDriver) != "undefined";
 }
 
 function SfdcFindObject(/**string*/ xpath)
@@ -51,7 +56,7 @@ function SfdcOpenApp(/**string*/ app)
 	if (obj)	
 	{
 		obj.object_name = app;
-		obj.DoClick();
+		obj.DoLClick();
 	}
 	else
 	{
@@ -70,7 +75,7 @@ function SfdcNavigateModule(/**string*/ module)
 	if (obj)	
 	{
 		obj.object_name = module;
-		obj.DoClick();
+		obj.DoLClick();
 	}
 	else
 	{
@@ -85,11 +90,16 @@ function SfdcNavigateModule(/**string*/ module)
 function SfdcSelectListView(/**string*/ view)
 {
 	SeS("G_Select_List_View").DoClick();
-	var xpath = "//a[@role='option']//span[text()='" + view + "']";
+	var xpath = "//a[@role='option' and contains(.,'" + view + "')]/span";
 	var obj = SfdcFindObject(xpath);
 	if (obj)	
 	{
 		obj.object_name = view;
+		obj._DoEnsureVisible();
+		obj._DoMouseMove();
+
+		// after mouse move we have new element
+		obj = SfdcFindObject(xpath);
 		obj.DoClick();
 	}
 	else
@@ -110,7 +120,16 @@ function SfdcSearchTable(/**string*/ value)
 		obj.object_name = "Search";
 		obj.DoClick();
 		obj.DoSetText(value);
-		obj.DoSendKeys("{ENTER}");
+		Global.DoSleep(500);
+		if (IsSeleniumTest())
+		{
+			WebDriver.Actions().SendKeys('\uE007').Perform();
+		}
+		else
+		{
+			obj.DoSendKeys("{ENTER}");
+		}
+		Global.DoSleep(2000);
 	}
 	else
 	{
@@ -135,7 +154,7 @@ function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 		var openButton = obj._DoDOMQueryXPath('.//lightning-icon');	
 		if (openButton && openButton.length)
 		{
-			openButton[0].DoClick();
+			openButton[0].DoLClick();
 		}
 		else
 		{
@@ -217,6 +236,7 @@ function LoginSfdc(/**string*/ url, /**string*/ userName, /**string*/ password)
 
 	Navigator.Open(url);
 	Navigator.SetPosition(0, 0);
+	Navigator.SetSize(1920, 1080);
 	
 	Tester.SuppressReport(true);
 

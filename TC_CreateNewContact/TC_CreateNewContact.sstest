@@ -18,6 +18,7 @@
   <SavePlaybackScreenshotsInTestReport>false</SavePlaybackScreenshotsInTestReport>
   <SaveScreenshotObjectOnly>false</SaveScreenshotObjectOnly>
   <SaveScreenshotsCaptureCursor>true</SaveScreenshotsCaptureCursor>
+  <SaveScreenshotOnFailure>false</SaveScreenshotOnFailure>
   <CommandLine />
   <EntryPoint>Test</EntryPoint>
   <WorkDir>..\.</WorkDir>
@@ -39,30 +40,37 @@
     <TestFiles>
       <TestFile>
         <Path>..\Data.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>..\Dropdowns.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Main.js</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Main.rvl.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>Objects.js</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>..\Output.xlsx</Path>
+        <Tags />
       </TestFile>
       <TestFile>
         <Path>..\User.js</Path>
+        <Tags />
       </TestFile>
     </TestFiles>
   </TestFiles>
   <CustomStrings />
   <TestParams>
-    <TestParam name="Browser" variable="g_browserLibrary" defaultValue="Chrome" description="Please, specify browser type to use" output="false" ask="false">
+    <TestParam name="Browser" variable="g_browserLibrary" defaultValue="Selenium - Chrome" description="Please, specify browser type to use" output="false" ask="false">
       <PossibleValues />
     </TestParam>
     <TestParam name="Record Title" variable="g_rWnd" defaultValue="regex:.*" description="Application Title to Record" output="false" ask="false">
@@ -72,6 +80,18 @@
       <PossibleValues />
     </TestParam>
     <TestParam name="Detect Web Plugins" variable="g_webPluginsAutoDetect" defaultValue="False" description="Enable web plugins auto detection" output="false" ask="false">
+      <PossibleValues />
+    </TestParam>
+    <TestParam name="ServerProjectId" variable="g_serverProjectId" defaultValue="9" output="false" ask="false">
+      <PossibleValues />
+    </TestParam>
+    <TestParam name="ServerTestCaseFolderId" variable="g_serverTestCaseFolderId" defaultValue="279" output="false" ask="false">
+      <PossibleValues />
+    </TestParam>
+    <TestParam name="ServerTestCaseId" variable="g_serverTestCaseId" defaultValue="1435" output="false" ask="false">
+      <PossibleValues />
+    </TestParam>
+    <TestParam name="Source Type" variable="g_serverRepositoryType" defaultValue="git" output="false" ask="false">
       <PossibleValues />
     </TestParam>
   </TestParams>

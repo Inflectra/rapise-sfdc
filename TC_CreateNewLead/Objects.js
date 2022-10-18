@@ -229,7 +229,7 @@ var saved_script_objects={
 		"ignore_object_name": true,
 		"object_library": "Chrome HTML",
 		"window_name": "John Smith | Salesforce",
-		"xpath": "//slot[@name='primaryField']/slot/lightning-formatted-name",
+		"xpath": "//slot[@name='primaryField']/lightning-formatted-name",
 		"title": "John Smith | Salesforce",
 		"url": ""
 	},

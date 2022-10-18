@@ -8,21 +8,29 @@ var saved_script_objects={
 					"url": "param:url",
 					"title": "param:title"
 				}
+			},
+			{
+				"locator_name": "HTML",
+				"location": {
+					"xpath": "//one-app-launcher-header/button",
+					"url": "param:url",
+					"title": "param:title"
+				}
 			}
 		],
-		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "Chrome Legacy Window",
-		"object_role": "ROLE_SYSTEM_WINDOW",
-		"object_class": "Chrome_RenderWidgetHostHWND",
+		"window_class": "param:object_class",
+		"object_text": "param:object_name",
+		"object_role": "",
+		"object_class": "Selenium",
 		"version": 0,
 		"object_type": "HTMLObject",
 		"object_flavor": "Button",
 		"object_name": "App Launcher",
 		"ignore_object_name": true,
-		"object_library": "Chrome HTML",
-		"window_name": "Lightning Experience | Salesforce",
-		"xpath": "//one-app-launcher-header/button",
-		"title": "Lightning Experience | Salesforce",
+		"object_library": "Selenium",
+		"window_name": "Home | Salesforce",
+		"xpath": "//div[@aria-label='App']/button[@type='button']",
+		"title": "Home | Salesforce",
 		"url": ""
 	},
 	"View_All": {
@@ -36,19 +44,19 @@ var saved_script_objects={
 				}
 			}
 		],
-		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "Chrome Legacy Window",
-		"object_role": "ROLE_SYSTEM_WINDOW",
-		"object_class": "Chrome_RenderWidgetHostHWND",
+		"window_class": "param:object_class",
+		"object_text": "param:object_name",
+		"object_role": "",
+		"object_class": "Selenium",
 		"version": 0,
 		"object_type": "HTMLObject",
 		"object_flavor": "Button",
 		"object_name": "View All",
 		"ignore_object_name": true,
-		"object_library": "Chrome HTML",
-		"window_name": "Lightning Experience | Salesforce",
-		"xpath": "//lightning-button/button[@type='button']",
-		"title": "Lightning Experience | Salesforce",
+		"object_library": "Selenium",
+		"window_name": "John Smith | Salesforce",
+		"xpath": "//button[@type=\"button\" and @aria-label=\"View All Applications\"]",
+		"title": "John Smith | Salesforce",
 		"url": ""
 	},
 	"Contacts": {
@@ -129,7 +137,7 @@ var saved_script_objects={
 		"title": "New Contact | Salesforce",
 		"url": ""
 	},
-	"*Last_Name": {
+	"Last_Name": {
 		"locations": [
 			{
 				"locator_name": "HTML",
@@ -179,84 +187,6 @@ var saved_script_objects={
 		"window_name": "New Contact | Salesforce",
 		"xpath": "//button[@name='SaveEdit' and @type='button']",
 		"title": "New Contact | Salesforce",
-		"url": ""
-	},
-	"CloseItem": {
-		"locations": [
-			{
-				"locator_name": "HTML",
-				"location": {
-					"xpath": "param:xpath",
-					"url": "param:url",
-					"title": "param:title"
-				}
-			}
-		],
-		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "Chrome Legacy Window",
-		"object_role": "ROLE_SYSTEM_WINDOW",
-		"object_class": "Chrome_RenderWidgetHostHWND",
-		"version": 0,
-		"object_type": "HTMLObject",
-		"object_flavor": "Generic",
-		"object_name": "LIGHTNING-ICON",
-		"ignore_object_name": true,
-		"object_library": "Chrome HTML",
-		"window_name": "John Smith | Salesforce",
-		"xpath": "//lightning-icon[contains(concat(' ', @class, ' '), ' slds-icon-utility-close ')]",
-		"title": "John Smith | Salesforce",
-		"url": ""
-	},
-	"App_Launcher1": {
-		"locations": [
-			{
-				"locator_name": "HTML",
-				"location": {
-					"xpath": "param:xpath",
-					"url": "param:url",
-					"title": "param:title"
-				}
-			}
-		],
-		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "Chrome Legacy Window",
-		"object_role": "ROLE_SYSTEM_WINDOW",
-		"object_class": "Chrome_RenderWidgetHostHWND",
-		"version": 0,
-		"object_type": "HTMLObject",
-		"object_flavor": "Button",
-		"object_name": "App Launcher",
-		"ignore_object_name": true,
-		"object_library": "Chrome HTML",
-		"window_name": "Lightning Experience | Salesforce",
-		"xpath": "//one-app-launcher-header[@id='window']/button",
-		"title": "Lightning Experience | Salesforce",
-		"url": ""
-	},
-	"View_All1": {
-		"locations": [
-			{
-				"locator_name": "HTML",
-				"location": {
-					"xpath": "param:xpath",
-					"url": "param:url",
-					"title": "param:title"
-				}
-			}
-		],
-		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "Chrome Legacy Window",
-		"object_role": "ROLE_SYSTEM_WINDOW",
-		"object_class": "Chrome_RenderWidgetHostHWND",
-		"version": 0,
-		"object_type": "HTMLObject",
-		"object_flavor": "Button",
-		"object_name": "View All",
-		"ignore_object_name": true,
-		"object_library": "Chrome HTML",
-		"window_name": "Lightning Experience | Salesforce",
-		"xpath": "//div[@role='combobox']/lightning-button/button[@type='button']",
-		"title": "Lightning Experience | Salesforce",
 		"url": ""
 	},
 	"Grid": {
@@ -337,7 +267,7 @@ var saved_script_objects={
 		"title": "All Contacts | Contacts | Salesforce",
 		"url": ""
 	},
-	"LIGHTNING-ICON": {
+	"ClearFilter": {
 		"locations": [
 			{
 				"locator_name": "HTML",
@@ -348,18 +278,18 @@ var saved_script_objects={
 				}
 			}
 		],
-		"window_class": "Chrome_WidgetWin_1",
-		"object_text": "Chrome Legacy Window",
-		"object_role": "ROLE_SYSTEM_WINDOW",
-		"object_class": "Chrome_RenderWidgetHostHWND",
+		"window_class": "param:object_class",
+		"object_text": "param:object_name",
+		"object_role": "",
+		"object_class": "Selenium",
 		"version": 0,
 		"object_type": "HTMLObject",
-		"object_flavor": "Generic",
-		"object_name": "LIGHTNING-ICON",
+		"object_flavor": "Button",
+		"object_name": "Clear",
 		"ignore_object_name": true,
-		"object_library": "Chrome HTML",
+		"object_library": "Selenium",
 		"window_name": "All Contacts | Contacts | Salesforce",
-		"xpath": "//lightning-icon[contains(concat(' ', @class, ' '), ' slds-icon-utility-close ')]",
+		"xpath": "//button[@lightning-input_input=\"\"]",
 		"title": "All Contacts | Contacts | Salesforce",
 		"url": ""
 	}
