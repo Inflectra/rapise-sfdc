@@ -42,6 +42,8 @@ function SfdcLaunch()
 	var pwd = Global.GetProperty("Password", "", "%WORKDIR%\\Config.xlsx");
 	
 	LoginSfdc(url, usr, pwd);
+	
+	Global.DoSleep(5000);
 }
 
 /**
@@ -52,7 +54,7 @@ function SfdcOpenApp(/**string*/ app)
 {
 	SeS("G_Waffle").DoClick();
 	var xpath = "//a[@data-label='" + app + "']";
-	var obj = SfdcFindObject(xpath);
+	var obj = Navigator.SeSFind(xpath);
 	if (obj)	
 	{
 		obj.object_name = app;
@@ -71,7 +73,7 @@ function SfdcOpenApp(/**string*/ app)
 function SfdcNavigateModule(/**string*/ module)
 {
 	var xpath = "//one-app-nav-bar-item-root/a[@title='" + module + "']";
-	var obj = SfdcFindObject(xpath);
+	var obj = Navigator.SeSFind(xpath);
 	if (obj)	
 	{
 		obj.object_name = module;
@@ -91,7 +93,7 @@ function SfdcSelectListView(/**string*/ view)
 {
 	SeS("G_Select_List_View").DoClick();
 	var xpath = "//a[@role='option' and contains(.,'" + view + "')]/span";
-	var obj = SfdcFindObject(xpath);
+	var obj = Navigator.SeSFind(xpath);
 	if (obj)	
 	{
 		obj.object_name = view;
@@ -99,7 +101,7 @@ function SfdcSelectListView(/**string*/ view)
 		obj._DoMouseMove();
 
 		// after mouse move we have new element
-		obj = SfdcFindObject(xpath);
+		obj = Navigator.SeSFind(xpath);
 		obj.DoClick();
 	}
 	else
@@ -114,7 +116,7 @@ function SfdcSelectListView(/**string*/ view)
 function SfdcSearchTable(/**string*/ value)
 {
 	var xpath = "//input[@type='search' and @class='slds-input']";
-	var obj = SfdcFindObject(xpath);
+	var obj = Navigator.SeSFind(xpath);
 	if (obj)	
 	{
 		obj.object_name = "Search";
@@ -144,9 +146,9 @@ function SfdcSearchTable(/**string*/ value)
  */
 function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 {
-	var xpath = "//lightning-combobox[./label[text()='" + name + "']]";
-	var obj = SfdcFindObject(xpath);
-	if (obj)	
+	var xpath = "//lightning-combobox[.//label[text()='" + name + "']]";
+	var obj = Navigator.SeSFind(xpath);
+	if (obj)
 	{
 		obj.object_name = name;
 		obj.DoEnsureVisible();
@@ -161,7 +163,7 @@ function SfdcSelectComboboxItem(/**string*/ name, /**string*/ item)
 			obj.DoClick(obj.GetWidth() - 20);
 		}
 		
-		var itemObj = SfdcFindObject("//lightning-base-combobox-item[.//span[@title='" + item + "']]");
+		var itemObj = Navigator.SeSFind("//lightning-base-combobox-item[.//span[@title='" + item + "']]");
 		if (itemObj)
 		{
 			itemObj.object_name = item;
