@@ -1,3 +1,4 @@
+# Rapise Tests
 *.user
 *.trp
 Reports
@@ -6,3 +7,4 @@ Reports
 Repository.json
 record.cmd
 play.cmd
+*.bak

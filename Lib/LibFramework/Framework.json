@@ -1,0 +1,132 @@
+{
+	"testsets": [
+		{
+			"id": "2b6a5a1d",
+			"name": "Default",
+			"description": "Default test set",
+			"configId": "9e224b26",
+			"testcases": [
+				{
+					"id": "ORIQVWIX"
+				},
+				{
+					"id": "7XOSPP4F"
+				},
+				{
+					"id": "KA191FIH"
+				},
+				{
+					"id": "RURJ00BW"
+				}
+			]
+		},
+		{
+			"id": "3f567d51",
+			"name": "Salesforce2",
+			"description": "",
+			"configId": "9e224b26",
+			"testcases": [
+				{
+					"id": "ORIQVWIX"
+				},
+				{
+					"id": "KA191FIH"
+				},
+				{
+					"id": "RURJ00BW"
+				},
+				{
+					"id": "7XOSPP4F"
+				}
+			]
+		}
+	],
+	"pageobjects": {
+		"Sfdc": {
+			"id": "C8PYUPKN",
+			"tags": "pageobject",
+			"js": "%WORKDIR%PageObjects\\Sfdc\\Sfdc.js",
+			"vpath": "",
+			"user": "%WORKDIR%PageObjects\\Sfdc\\User.js",
+			"sstest": "%WORKDIR%PageObjects\\Sfdc\\Test.sstest",
+			"rep": "%WORKDIR%PageObjects\\Sfdc\\Objects.js",
+			"libraries": [
+				"Web"
+			],
+			"hash": "3BE3E1902AF7AB878A4C5EAD67661A2A13E5AC06CA9336DAB72A46597F44D72468C7BF443CF916217AB7E7640CE1C1776E661038062DD844EDB384849E35676D"
+		}
+	},
+	"testcases": [
+		{
+			"name": "CreateNewLead",
+			"alias": "CreateNewLead",
+			"vpath": "",
+			"sstest": "%WORKDIR%TestCases\\CreateNewLead\\Test.sstest",
+			"tags": "testcase",
+			"id": "KA191FIH",
+			"rep": "%WORKDIR%TestCases\\CreateNewLead\\Objects.js",
+			"user": "%WORKDIR%TestCases\\CreateNewLead\\User.js",
+			"libraries": [
+				"Web",
+				"DomSalesforce"
+			],
+			"hash": "70D6EAD78C43650E0AA2E47DBB1A441235A22A77BE0D0B89D221B6360342AA4DE64ECF2074AF8390245C334763481B86B92985C23157CD2DAE29A4F36B2BA8C158EF00DFD8F3B8002B3927A9283FAC93"
+		},
+		{
+			"name": "CreateNewContact",
+			"alias": "CreateNewContact",
+			"vpath": "",
+			"sstest": "%WORKDIR%TestCases\\CreateNewContact\\Test.sstest",
+			"tags": "testcase",
+			"id": "7XOSPP4F",
+			"rep": "%WORKDIR%TestCases\\CreateNewContact\\Objects.js",
+			"user": "%WORKDIR%TestCases\\CreateNewContact\\User.js",
+			"libraries": [
+				"Web"
+			],
+			"hash": "52414553794DBED566DF3A0D3CE84A0F19726ADB7C29208FAF087DD4C34EEF3FE64ECF2074AF8390245C334763481B864C6D115B936423C29D9837EF5D43B00B2EBB6E51B23EE875CE141100EF68E984"
+		},
+		{
+			"name": "CheckAppLauncher",
+			"alias": "CheckAppLauncher",
+			"vpath": "",
+			"sstest": "%WORKDIR%TestCases\\CheckAppLauncher\\Test.sstest",
+			"tags": "testcase",
+			"id": "ORIQVWIX",
+			"rep": "%WORKDIR%TestCases\\CheckAppLauncher\\Objects.js",
+			"user": "%WORKDIR%TestCases\\CheckAppLauncher\\User.js",
+			"libraries": [
+				"Web"
+			],
+			"hash": "F7E8D6E3550345A6EA38906069BEF29619726ADB7C29208FAF087DD4C34EEF3FE64ECF2074AF8390245C334763481B86A68A88484D86F547794375DAEDBD24732CE4D8C6CB1097491571BE7AA392ECA9"
+		},
+		{
+			"name": "CreateOpportunity",
+			"alias": "CreateOpportunity",
+			"vpath": "",
+			"sstest": "%WORKDIR%TestCases\\CreateOpportunity\\Test.sstest",
+			"tags": "testcase",
+			"id": "RURJ00BW",
+			"rep": "%WORKDIR%TestCases\\CreateOpportunity\\Objects.js",
+			"user": "%WORKDIR%TestCases\\CreateOpportunity\\User.js",
+			"libraries": [
+				"Web"
+			],
+			"hash": "2CED25130E55EE75498206387168454319726ADB7C29208FAF087DD4C34EEF3FE64ECF2074AF8390245C334763481B867D5BC5D08AFBDF05FF432B71E11F03B9C7CAE8A99AD63B5030F402E64F09BFD9"
+		}
+	],
+	"shared": [
+		{
+			"js": "%WORKDIR%Common.js"
+		},
+		{
+			"data": "%WORKDIR%Dropdowns.xlsx"
+		},
+		{
+			"data": "%WORKDIR%Shared\\Config.xlsx"
+		},
+		{
+			"data": "%WORKDIR%Shared\\Data.xlsx"
+		}
+	]
+}

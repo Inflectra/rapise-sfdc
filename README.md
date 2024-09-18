@@ -2,7 +2,7 @@
 
 Framework for testing Salesforce applications
 
-- Reusable functions are defined in `User.js`.
+- Reusable actions are defined in `Sfdc` module.
 - Data for each test case is defined in `Data.xlsx`.
 - `Dropdowns.xlsx` contains lists of values for [RVL dropdowns](https://rapisedoc.inflectra.com/Guide/rvl_editor/#param-dropdowns).
 - `Output.xlsx` is used to persist data between test executions (see SetOutputValue, GetOutputValue common functions below).
@@ -13,33 +13,25 @@ The way of test parameterization and reading data from an Excel spreadsheet is d
 
 ## Browser Profiles
 
-The framework includes a [local browser profile](https://rapisedoc.inflectra.com/Guide/browser_settings/#local-browser-profiles) located in `Profiles\BrowserProfiles` folder. It is a profile for Chrome. The profile to use is specified in `User.js` file and is used globally by all test cases:
+The framework includes a local Chrome [browser profile](https://rapisedoc.inflectra.com/Guide/browser_settings/#local-browser-profiles) located in `Profiles\SeleniumProfiles` folder. This profile is configured to launch Chrome with the same user data profile to deal with MFA in Salesforce. It launches Chrome with these arguments:
 
 ```javascript
-g_browserLibrary = "Chrome";
+["disable-notifications", "user-data-dir=C:\\ProgramData\\Inflectra\\Rapise\\Temp\\Chrome"]
 ```
 
-You may change the profile in `User.js` or pass `g_browserLibrary` value from SpiraTest or via command line.
+## Common Actions
 
-## Common Functions
-
-All functions are defined in [User.js](User.js). Look into this file for details.
-
-**Note:** If you are on Rapise 6.6+ you may use global `Sfdc` object.
+All actions are defined in `Sfdc` module and implemented in `Sfdc.js`. Look into this file for details.
 
 ![Global Object](Media/Sfdc.png)
 
-Every function with `Sfdc` prefix is now also an action of `Sfdc` (without the prefix). These two variants are equavalent:
-
-![Equivalents](Media/FunctionSfdc.png)
-
-### SfdcLaunch
+### Sfdc.Launch
 
 Launches Salesforce in a browser. SfdcUrl, UserName, Password must be set in Config.xlsx
 
 ![SfdcLaunch RVL](Media/SfdcLaunch.png)
 
-### SfdcOpenApp
+### Sfdc.OpenApp
 
 Opens application.
 
@@ -47,7 +39,7 @@ Opens application.
 
 ![OpenApp](Media/OpenApp.png)
 
-### SfdcNavigateModule
+### Sfdc.NavigateModule
 
 Navigates to module using nav bar.
 
@@ -55,7 +47,7 @@ Navigates to module using nav bar.
 
 ![NavigateModule](Media/NavigateModule.png)
 
-### SfdcSelectListView
+### Sfdc.SelectListView
 
 Selects list view.
 
@@ -63,7 +55,7 @@ Selects list view.
 
 ![SelectListView](Media/SelectListView.png)
 
-### SfdcSearchTable
+### Sfdc.SearchTable
 
 Searches data in a table.
 
@@ -71,7 +63,7 @@ Searches data in a table.
 
 ![SearchTable](Media/SearchTable.png)
 
-### SfdcSelectComboboxItem
+### Sfdc.SelectComboboxItem
 
 Selects item from a combobox.
 
